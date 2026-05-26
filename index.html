@@ -291,10 +291,10 @@
             <h1>📊 Dashboard Presupuestario 2026</h1>
             <p>Temporada - A. Los Placeres</p>
             <div class="info-box">
-                💡 <strong>Datos locales</strong> - No requiere conexión a internet para funcionar
+                💡 <strong>Actualizado</strong> - Datos al 26 de Abril 2026
             </div>
             <div class="header-controls">
-                <span class="time-display" id="time">📅 Actualizado: --:--:--</span>
+                <span class="time-display" id="time">📅 Cargado: --:--:--</span>
                 <span class="status">✅ Dashboard operacional</span>
             </div>
         </div>
@@ -333,34 +333,34 @@
         </div>
 
         <div class="footer">
-            <p>✅ Dashboard funcional con datos locales</p>
-            <p>Para actualizar: descarga el CSV de Google Sheets y comparte los datos actualizados</p>
+            <p>✅ Dashboard con datos actualizados</p>
+            <p>Para actualizar: Descarga CSV de Google Sheets y comparte los datos</p>
         </div>
     </div>
 
     <script>
-        // Datos embebidos del Google Sheet
+        // Datos actualizados del Google Sheet (26 de Abril 2026)
         const dashboardData = [
-            { nombre: 'Cerezos 2026 Produccion', ppto: 385058364, acumPpto: 74996332, realAbr: 66702271, jun: 0, jul: 0, ago: 0, sep: 0, oct: 0, nov: 0, dic: 0, ene: 20734295, feb: 18061805, mar: 16346550, abr: 11559621, may: 1688513 },
-            { nombre: 'Arandanos 2026 Produccion', ppto: 104709507, acumPpto: 16033166, realAbr: 19127759, jun: 0, jul: 0, ago: 0, sep: 0, oct: 0, nov: 0, dic: 0, ene: 13569441, feb: 3099202, mar: 2459116, abr: 1592500, may: 0 },
-            { nombre: 'Avellanos 2026 Produccion', ppto: 246677469, acumPpto: 4629790, realAbr: 0, jun: 0, jul: 0, ago: 0, sep: 0, oct: 0, nov: 0, dic: 0, ene: 0, feb: 0, mar: 0, abr: 0, may: 0 },
-            { nombre: 'Siembras 2026', ppto: 268480995, acumPpto: 24342832, realAbr: 591094, jun: 0, jul: 0, ago: 0, sep: 0, oct: 0, nov: 0, dic: 0, ene: 119118, feb: 471976, mar: 0, abr: 20740000, may: 0 },
-            { nombre: 'Achicoria 2026', ppto: 140000003, acumPpto: 0, realAbr: 0, jun: 0, jul: 0, ago: 0, sep: 0, oct: 0, nov: 0, dic: 0, ene: 0, feb: 0, mar: 0, abr: 0, may: 0 },
-            { nombre: 'Fardos 2026', ppto: 556959122, acumPpto: 512494234, realAbr: 491723260, jun: 2000000, jul: -533199, ago: 31269740, sep: 3748375, oct: 25272214, nov: 28035276, dic: 31119132, ene: 77779518, feb: 85778378, mar: 123163367, abr: 84090459, may: 14668232 },
-            { nombre: 'Ganaderia 2026', ppto: 466431671, acumPpto: 113110000, realAbr: 166675312, jun: 0, jul: 10500000, ago: 0, sep: 0, oct: 0, nov: 5795851, dic: 1230897, ene: 3848698, feb: 4398994, mar: 8748045, abr: 132152827, may: 1185063 },
-            { nombre: 'Of. Central 2026', ppto: 254957604, acumPpto: 84985868, realAbr: 81232121, jun: 0, jul: 0, ago: 0, sep: 0, oct: 0, nov: 0, dic: 0, ene: 19440616, feb: 16517276, mar: 21610527, abr: 23663702, may: 355781 },
-            { nombre: 'Mantencion Casas y Bodegas 2026', ppto: 30960000, acumPpto: 13570000, realAbr: 5280506, jun: 0, jul: 0, ago: 0, sep: 0, oct: 0, nov: 0, dic: 0, ene: 749246, feb: 1629665, mar: 775004, abr: 2126591, may: 296782 },
-            { nombre: 'Formacion Avellanos 2026', ppto: 241754920, acumPpto: 0, realAbr: 0, jun: 0, jul: 0, ago: 0, sep: 0, oct: 0, nov: 0, dic: 0, ene: 0, feb: 0, mar: 0, abr: 0, may: 5895704 },
+            { nombre: 'Cerezos 2026 Produccion', ppto: 385058364, acumPpto: 74996332, realAbr: 66702271, jun: 0, jul: 0, ago: 0, sep: 0, oct: 0, nov: 0, dic: 0, ene: 20734295, feb: 18061805, mar: 16346550, abr: 11559621 },
+            { nombre: 'Arandanos 2026 Produccion', ppto: 104709507, acumPpto: 16033166, realAbr: 19127759, jun: 0, jul: 0, ago: 0, sep: 0, oct: 0, nov: 0, dic: 0, ene: 13569441, feb: 3099202, mar: 2459116, abr: 0 },
+            { nombre: 'Avellanos 2026 Produccion', ppto: 246677469, acumPpto: 4629790, realAbr: 0, jun: 0, jul: 0, ago: 0, sep: 0, oct: 0, nov: 0, dic: 0, ene: 0, feb: 0, mar: 0, abr: 0 },
+            { nombre: 'Siembras 2026', ppto: 268480995, acumPpto: 24342832, realAbr: 591094, jun: 0, jul: 0, ago: 0, sep: 0, oct: 0, nov: 0, dic: 0, ene: 119118, feb: 471976, mar: 0, abr: 0 },
+            { nombre: 'Achicoria 2026', ppto: 140000003, acumPpto: 0, realAbr: 0, jun: 0, jul: 0, ago: 0, sep: 0, oct: 0, nov: 0, dic: 0, ene: 0, feb: 0, mar: 0, abr: 0 },
+            { nombre: 'Fardos 2026', ppto: 556959122, acumPpto: 512494234, realAbr: 491723260, jun: 2000000, jul: -533199, ago: 31269740, sep: 3748375, oct: 25272214, nov: 28035276, dic: 31119132, ene: 77779518, feb: 85778378, mar: 123163367, abr: 84090459 },
+            { nombre: 'Ganaderia 2026', ppto: 466431671, acumPpto: 113110000, realAbr: 166675312, jun: 0, jul: 10500000, ago: 0, sep: 0, oct: 0, nov: 5795851, dic: 1230897, ene: 3848698, feb: 4398994, mar: 8748045, abr: 132152827 },
+            { nombre: 'Of. Central 2026', ppto: 254957604, acumPpto: 84985868, realAbr: 81232121, jun: 0, jul: 0, ago: 0, sep: 0, oct: 0, nov: 0, dic: 0, ene: 19440616, feb: 16517276, mar: 21610527, abr: 23663702 },
+            { nombre: 'Mantencion Casas y Bodegas 2026', ppto: 30960000, acumPpto: 13570000, realAbr: 5280506, jun: 0, jul: 0, ago: 0, sep: 0, oct: 0, nov: 0, dic: 0, ene: 749246, feb: 1629665, mar: 775004, abr: 2126591 },
+            { nombre: 'Formacion Avellanos 2026', ppto: 241754920, acumPpto: 0, realAbr: 0, jun: 0, jul: 0, ago: 0, sep: 0, oct: 0, nov: 0, dic: 0, ene: 0, feb: 0, mar: 0, abr: 0 },
         ];
 
-        const meses = ['jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic', 'ene', 'feb', 'mar', 'abr', 'may'];
-        const mesLabels = ['Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic', 'Ene', 'Feb', 'Mar', 'Abr', 'May'];
+        const meses = ['jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic', 'ene', 'feb', 'mar', 'abr'];
+        const mesLabels = ['Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic', 'Ene', 'Feb', 'Mar', 'Abr'];
 
         const formatCurrency = (val) => `$${(val / 1000000).toFixed(2)}M`;
 
         function updateTime() {
             const now = new Date().toLocaleTimeString('es-ES');
-            document.getElementById('time').textContent = `📅 Actualizado: ${now}`;
+            document.getElementById('time').textContent = `📅 Cargado: ${now}`;
         }
 
         function renderDashboard() {
