@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 3000;
 
 const SHEET_ID = '1SPKF4fXDGXj76NEZWeKGLQ2_wPOzdy8oHm0-_c6W4wk';
 const API_KEY = 'AIzaSyDAo6rY4dkM8XOznCgowu04ULIWKtAMBb0';
-const RANGE = 'Hoja1!A1:S20';
+const RANGE = encodeURIComponent('Hoja 1!A1:S20');
 
 app.use(cors());
 app.use(express.static('public'));
@@ -35,7 +35,6 @@ app.get('/api/data', async (req, res) => {
 
     for (let i = 0; i < rows.length; i++) {
       const row = rows[i];
-      // Buscar filas que tengan "GASTOS" en columna C (índice 2)
       if (!row[2] || !row[2].includes('GASTOS')) continue;
       if (!row[1] || row[1].toLowerCase().includes('total')) continue;
 
