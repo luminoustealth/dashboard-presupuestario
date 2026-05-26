@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 3000;
 
 const SHEET_ID = '1SPKF4fXDGXj76NEZWeKGLQ2_wPOzdy8oHm0-_c6W4wk';
 const API_KEY = 'AIzaSyDAo6rY4dkM8XOznCgowu04ULIWKtAMBb0';
-const RANGE = encodeURIComponent('Hoja 1!A1:S20');
+const RANGE = encodeURIComponent('Hoja 1!A1:T25');
 
 app.use(cors());
 app.use(express.static('public'));
@@ -16,12 +16,12 @@ app.get('/api/data', async (req, res) => {
   try {
     const url = `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${RANGE}?key=${API_KEY}`;
     const response = await fetch(url);
-    
+
     if (!response.ok) {
       const err = await response.json();
       throw new Error(err.error?.message || `HTTP Error: ${response.status}`);
     }
-    
+
     const result = await response.json();
     const rows = result.values || [];
 
@@ -35,25 +35,28 @@ app.get('/api/data', async (req, res) => {
 
     for (let i = 0; i < rows.length; i++) {
       const row = rows[i];
-      if (!row[2] || !row[2].includes('GASTOS')) continue;
-      if (!row[1] || row[1].toLowerCase().includes('total')) continue;
+      // Buscar filas con "GASTOS" en columna B (índice 1)
+      if (!row[1] || !row[1].includes('GASTOS')) continue;
+      if (!row[0] || row[0].toLowerCase().includes('total')) continue;
 
       data.push({
-        nombre: row[1] || '',
-        ppto: parseNum(row[3]),
-        pptoAbr: parseNum(row[4]),
-        real: parseNum(row[5]),
-        jun: parseNum(row[6]),
-        jul: parseNum(row[7]),
-        ago: parseNum(row[8]),
-        sep: parseNum(row[9]),
-        oct: parseNum(row[10]),
-        nov: parseNum(row[11]),
-        dic: parseNum(row[12]),
-        ene: parseNum(row[13]),
-        feb: parseNum(row[14]),
-        mar: parseNum(row[15]),
-        abr: parseNum(row[16]),
+        nombre: row[0] || '',
+        ppto: parseNum(row[2]),
+        pptoAbr: parseNum(row[3]),
+        real: parseNum(row[4]),
+        proyeccion: parseNum(row[5]),
+        mesCierre: row[6] || '',
+        jun: parseNum(row[7]),
+        jul: parseNum(row[8]),
+        ago: parseNum(row[9]),
+        sep: parseNum(row[10]),
+        oct: parseNum(row[11]),
+        nov: parseNum(row[12]),
+        dic: parseNum(row[13]),
+        ene: parseNum(row[14]),
+        feb: parseNum(row[15]),
+        mar: parseNum(row[16]),
+        abr: parseNum(row[17]),
       });
     }
 
