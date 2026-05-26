@@ -6,451 +6,173 @@
 <title>Dashboard Agricola 2026</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f1f5f9;padding:20px;color:#1f2937;}
-.container{max-width:1300px;margin:0 auto;}
-.header{background:linear-gradient(135deg,#1e3a5f,#2563eb);color:white;border-radius:14px;padding:24px 32px;margin-bottom:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
-.header h1{font-size:1.8rem;font-weight:700;margin-bottom:4px;}
-.header p{font-size:0.85rem;opacity:0.85;}
-.badge{background:rgba(16,185,129,0.35);color:#6ee7b7;padding:6px 14px;border-radius:8px;font-size:0.8rem;font-weight:600;}
-.slbl{font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.7px;color:#6b7280;margin:20px 0 10px;}
-.kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-bottom:8px;}
-.kpi{background:white;border-radius:12px;padding:16px 18px;border-top:3px solid;box-shadow:0 1px 3px rgba(0,0,0,0.06);}
-.kpi.bl{border-top-color:#3b82f6;}.kpi.gr{border-top-color:#10b981;}.kpi.or{border-top-color:#f59e0b;}
-.kpi.re{border-top-color:#ef4444;}.kpi.pu{border-top-color:#8b5cf6;}.kpi.te{border-top-color:#14b8a6;}
-.kl{font-size:0.7rem;color:#6b7280;margin-bottom:6px;font-weight:600;text-transform:uppercase;letter-spacing:0.4px;}
-.kv{font-size:1.6rem;font-weight:700;color:#1f2937;margin-bottom:3px;}
-.ks{font-size:0.72rem;color:#9ca3af;}
-.card{background:white;border-radius:12px;padding:20px 24px;box-shadow:0 1px 3px rgba(0,0,0,0.06);margin-bottom:20px;}
-.card h2{font-size:1rem;font-weight:700;color:#1f2937;margin-bottom:4px;}
-.card .sub{font-size:0.78rem;color:#6b7280;margin-bottom:16px;}
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px;}
-.ins{border-radius:8px;padding:12px 16px;margin-top:14px;border-left:3px solid;}
-.ibl{background:#eff6ff;border-color:#3b82f6;}.igr{background:#f0fdf4;border-color:#10b981;}
-.ior{background:#fffbeb;border-color:#f59e0b;}.ire{background:#fef2f2;border-color:#ef4444;}
-.ipu{background:#f5f3ff;border-color:#8b5cf6;}.ite{background:#f0fdfa;border-color:#14b8a6;}
-.it{font-size:0.82rem;font-weight:700;color:#1f2937;margin-bottom:6px;}
-.ix{font-size:0.78rem;color:#374151;line-height:1.65;margin-bottom:8px;}
-.iq{font-size:0.78rem;color:#374151;line-height:1.9;padding-left:16px;}
-.sem-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px;margin-bottom:20px;}
-.sc{background:white;border:1px solid #e5e7eb;border-radius:10px;padding:12px 14px;display:flex;align-items:center;gap:12px;}
-.si h4{font-size:0.82rem;font-weight:700;color:#1f2937;}
-.si p{font-size:0.72rem;color:#6b7280;}
-.sp{margin-left:auto;font-size:1rem;font-weight:700;}
-.al{display:flex;gap:10px;padding:10px 14px;border-radius:10px;margin-bottom:8px;border:1px solid;}
-.are{background:#fef2f2;border-color:#fecaca;}.aor{background:#fffbeb;border-color:#fde68a;}.abl{background:#eff6ff;border-color:#bfdbfe;}
-.ah{font-size:0.82rem;font-weight:700;color:#1f2937;margin-bottom:2px;}
-.ap{font-size:0.75rem;color:#6b7280;}
-.pc{background:linear-gradient(135deg,#1e3a5f,#2563eb);color:white;border-radius:12px;padding:22px 24px;margin-bottom:20px;}
-.pg{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:16px;}
-.pi{background:rgba(255,255,255,0.14);border-radius:10px;padding:16px;text-align:center;}
-.pv{font-size:1.5rem;font-weight:700;margin-bottom:4px;}
-.pl{font-size:0.75rem;opacity:0.85;}
-.ri{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid #f3f4f6;}
-.rn{width:24px;height:24px;border-radius:50%;background:#f3f4f6;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700;color:#6b7280;flex-shrink:0;}
-.rb{height:6px;background:#f3f4f6;border-radius:3px;overflow:hidden;}
-.rf{height:100%;border-radius:3px;}
-table{width:100%;border-collapse:collapse;font-size:0.8rem;}
-th{background:#f9fafb;padding:9px 11px;text-align:right;font-weight:700;color:#374151;font-size:0.72rem;text-transform:uppercase;border-bottom:2px solid #e5e7eb;}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:#f0f4f8;padding:20px;}
+.container{max-width:1200px;margin:0 auto;}
+.header{background:linear-gradient(135deg,#0f2942,#1d4ed8);color:white;border-radius:12px;padding:20px 24px;margin-bottom:20px;}
+.header h1{font-size:24px;font-weight:700;margin-bottom:4px;}
+.header p{font-size:13px;opacity:0.85;}
+.badge{background:rgba(16,185,129,0.3);color:#6ee7b7;padding:6px 12px;border-radius:6px;font-size:12px;font-weight:600;}
+.section-title{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.8px;color:#6b7280;margin:18px 0 10px;}
+.kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-bottom:8px;}
+.kpi{background:white;border-radius:10px;padding:14px 16px;border-top:3px solid;box-shadow:0 1px 3px rgba(0,0,0,0.06);}
+.kpi-label{font-size:10px;color:#6b7280;margin-bottom:6px;font-weight:700;text-transform:uppercase;}
+.kpi-value{font-size:20px;font-weight:700;margin-bottom:2px;}
+.kpi-sub{font-size:11px;color:#9ca3af;}
+.card{background:white;border-radius:10px;padding:16px 20px;box-shadow:0 1px 3px rgba(0,0,0,0.06);margin-bottom:16px;}
+.card h2{font-size:14px;font-weight:700;color:#1f2937;margin-bottom:2px;}
+.card .sub{font-size:11px;color:#6b7280;margin-bottom:12px;}
+table{width:100%;border-collapse:collapse;font-size:11px;}
+th{background:#f9fafb;padding:8px 10px;text-align:right;font-weight:700;color:#374151;font-size:10px;text-transform:uppercase;border-bottom:2px solid #e5e7eb;}
 th:first-child{text-align:left;}
-td{padding:9px 11px;border-bottom:1px solid #f3f4f6;text-align:right;}
+td{padding:8px 10px;border-bottom:1px solid #f3f4f6;text-align:right;color:#1f2937;}
 td:first-child{text-align:left;font-weight:600;}
-.bg{background:#dcfce7;color:#166534;padding:2px 8px;border-radius:20px;font-size:0.72rem;font-weight:700;}
-.bo{background:#fef3c7;color:#b45309;padding:2px 8px;border-radius:20px;font-size:0.72rem;font-weight:700;}
-.br{background:#fecaca;color:#991b1b;padding:2px 8px;border-radius:20px;font-size:0.72rem;font-weight:700;}
-.bgr{background:#f3f4f6;color:#6b7280;padding:2px 8px;border-radius:20px;font-size:0.72rem;font-weight:700;}
-.pos{color:#10b981;font-weight:700;}.neg{color:#ef4444;font-weight:700;}
-svg text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;}
-.gantt-wrap{overflow-x:auto;}
-.heat-wrap{overflow-x:auto;}
-.footer{background:white;border-radius:12px;padding:14px 24px;text-align:center;color:#9ca3af;font-size:0.8rem;margin-top:8px;}
-@media(max-width:900px){.grid2{grid-template-columns:1fr;}.pg{grid-template-columns:1fr;}}
+.insight{border-radius:8px;padding:12px 14px;margin-top:10px;border-left:3px solid;}
+.insight.blue{background:#eff6ff;border-color:#3b82f6;}
+.insight.green{background:#f0fdf4;border-color:#10b981;}
+.insight.orange{background:#fffbeb;border-color:#f59e0b;}
+.insight.red{background:#fef2f2;border-color:#ef4444;}
+.insight-title{font-size:11px;font-weight:700;color:#1f2937;margin-bottom:4px;}
+.insight-text{font-size:10px;color:#374151;line-height:1.6;margin-bottom:6px;}
+.insight-list{font-size:10px;color:#374151;line-height:1.8;padding-left:12px;}
 </style>
 </head>
 <body>
 <div class="container">
-
 <div class="header">
-  <div>
-    <h1>🌾 Dashboard Gerencial Agricola 2026</h1>
-    <p>Temporada A. Los Placeres · Control presupuestario</p>
-    <p style="font-size:0.75rem;opacity:0.7;margin-top:6px;" id="fecha"></p>
-  </div>
-  <span class="badge">✅ Datos actualizados</span>
+  <h1>Dashboard Gerencial Agricola 2026</h1>
+  <p>Temporada A. Los Placeres - Control presupuestario en tiempo real</p>
+  <span class="badge" style="display:inline-block;margin-top:8px;">Datos actualizados</span>
 </div>
 
-<div class="slbl">Resumen ejecutivo</div>
+<div class="section-title">Resumen Ejecutivo</div>
 <div class="kpi-grid" id="kpis1"></div>
-<div class="slbl">Indicadores gerenciales</div>
+
+<div class="section-title">Indicadores Gerenciales</div>
 <div class="kpi-grid" id="kpis2"></div>
 
-<div class="card"><h2>🔍 Diagnostico ejecutivo</h2><p class="sub">Analisis automatico del estado de la temporada</p><div id="diag"></div></div>
+<div class="card"><h2>Diagnostico Ejecutivo</h2><p class="sub">Analisis automatico del estado de la temporada</p><div id="diag"></div></div>
 
-<div class="slbl">Semaforo por proyecto</div>
-<div class="sem-grid" id="sem"></div>
+<div class="section-title">Resultados Principales</div>
+<table id="tabla"></table>
 
-<div class="card"><h2>⚠️ Alertas automaticas</h2><p class="sub">Situaciones que requieren atencion inmediata</p><div id="alertas"></div></div>
-
-<div class="pc" id="proy"></div>
-
-<div class="grid2">
-  <div class="card" style="margin-bottom:0"><h2>📈 Gastos mensuales + acumulado</h2><p class="sub">Barras azules = gasto mensual · Linea roja = acumulado</p><div id="g1"></div><div class="ins ibl" id="i1"></div></div>
-  <div class="card" style="margin-bottom:0"><h2>🥧 Distribucion del gasto</h2><p class="sub">Participacion de cada proyecto en el gasto real</p><div id="g2"></div><div class="ins ipu" id="i2"></div></div>
-</div>
-<div style="margin-bottom:20px;"></div>
-
-<div class="grid2">
-  <div class="card" style="margin-bottom:0"><h2>🏆 Ranking por ejecucion</h2><p class="sub">Proyectos de mayor a menor % ejecutado</p><div id="rank"></div><div class="ins ite" id="i3"></div></div>
-  <div class="card" style="margin-bottom:0"><h2>💰 Presupuesto vs real</h2><p class="sub">Comparacion presupuesto temporada vs gasto real</p><div id="g3"></div><div class="ins ior" id="i4"></div></div>
-</div>
-<div style="margin-bottom:20px;"></div>
-
-<div class="card"><h2>📊 Ingresos vs gastos por proyecto</h2><p class="sub">Comparacion entre presupuesto de ingresos y gastos</p><div id="g4"></div><div class="ins igr" id="i5"></div></div>
-
-<div class="card"><h2>🌊 Waterfall — resultado neto por proyecto</h2><p class="sub">Como cada proyecto contribuye al resultado neto total</p><div id="g5"></div><div class="ins ibl" id="i6"></div></div>
-
-<div class="card"><h2>📅 Gantt — linea de tiempo de cierres</h2><p class="sub">Meses de cierre planificados por proyecto</p><div class="gantt-wrap" id="gantt"></div><div class="ins ior" id="i7"></div></div>
-
-<div class="card"><h2>🌡️ Heatmap de gastos mensuales</h2><p class="sub">Intensidad del gasto por proyecto y mes</p><div class="heat-wrap" id="heat"></div><div class="ins ipu" id="i8"></div></div>
-
-<div class="card" style="overflow-x:auto"><h2>📋 Tabla completa</h2><p class="sub">Detalle por proyecto con mes de cierre y proyeccion</p><table id="tabla"></table><div class="ins ibl" style="margin-top:14px" id="i9"></div></div>
-
-<div class="footer">Dashboard Gerencial Agricola 2026 · A. Los Placeres · Generado con Claude</div>
+<div class="card"><h2>Resumen de Alertas</h2><div id="alertas"></div></div>
 </div>
 
 <script>
-document.getElementById('fecha').textContent = 'Generado: ' + new Date().toLocaleString('es-CL');
+const gastos=[
+  {n:'Cerezos 2026',s:'Cerezos',ppto:385058364,pa:74996332,real:66702271,mc:'Dic 2026'},
+  {n:'Arandanos 2026',s:'Arandanos',ppto:106118196,pa:16033166,real:19127759,mc:'Dic 2026'},
+  {n:'Avellanos 2026',s:'Avellanos',ppto:248582504,pa:4629790,real:0,mc:'Jun 2027'},
+  {n:'Siembras 2026',s:'Siembras',ppto:268480995,pa:24342832,real:591094,mc:'Abr 2027'},
+  {n:'Achicoria 2026',s:'Achicoria',ppto:140000003,pa:0,real:0,mc:'Mar 2027'},
+  {n:'Fardos 2026',s:'Fardos',ppto:593959124,pa:549494235,real:491723260,mc:'Ago 2027'},
+  {n:'Ganaderia 2026',s:'Ganaderia',ppto:466431671,pa:113110000,real:166675312,mc:'Abr 2027'},
+  {n:'Of. Central',s:'Of.Central',ppto:254957604,pa:84985868,real:81232121,mc:'Dic 2026'},
+  {n:'Mantencion',s:'Mantencion',ppto:30960000,pa:13570000,real:5280506,mc:'Dic 2026'},
+  {n:'Formacion',s:'Formacion',ppto:241754920,pa:0,real:0,mc:'Abr 2027'}
+];
 
-const G = [
-  {n:'Cerezos 2026 Produccion',s:'Cerezos',ppto:385058364,pa:74996332,real:66702271,proy:385058364,mc:'Dic 2026',mci:6,jun:0,jul:0,ago:0,sep:0,oct:0,nov:0,dic:0,ene:20734295,feb:18061805,mar:16346550,abr:11559621},
-  {n:'Arandanos 2026 Produccion',s:'Arandanos',ppto:106118196,pa:16033166,real:19127759,proy:106118196,mc:'Dic 2026',mci:6,jun:0,jul:0,ago:0,sep:0,oct:0,nov:0,dic:0,ene:13569441,feb:3099202,mar:2459116,abr:0},
-  {n:'Avellanos 2026 Produccion',s:'Avellanos',ppto:248582504,pa:4629790,real:0,proy:248582504,mc:'Jun 2027',mci:12,jun:0,jul:0,ago:0,sep:0,oct:0,nov:0,dic:0,ene:0,feb:0,mar:0,abr:0},
-  {n:'Siembras 2026',s:'Siembras',ppto:268480995,pa:24342832,real:591094,proy:268480995,mc:'Abr 2027',mci:10,jun:0,jul:0,ago:0,sep:0,oct:0,nov:0,dic:0,ene:0,feb:119118,mar:471976,abr:0},
-  {n:'Achicoria 2026',s:'Achicoria',ppto:140000003,pa:0,real:0,proy:140000003,mc:'Mar 2027',mci:9,jun:0,jul:0,ago:0,sep:0,oct:0,nov:0,dic:0,ene:0,feb:0,mar:0,abr:0},
-  {n:'Fardos 2026',s:'Fardos',ppto:593959124,pa:549494235,real:491723260,proy:593959124,mc:'Ago 2027',mci:14,jun:2000000,jul:-533199,ago:31269740,sep:3748375,oct:25272214,nov:28035276,dic:31119132,ene:77779518,feb:85778378,mar:123163367,abr:84090459},
-  {n:'Ganaderia 2026',s:'Ganaderia',ppto:466431671,pa:113110000,real:166675312,proy:466431671,mc:'Abr 2027',mci:10,jun:0,jul:10500000,ago:0,sep:0,oct:0,nov:5795851,dic:1230897,ene:3848698,feb:4398994,mar:8748045,abr:132152827},
-  {n:'Of. Central 2026',s:'Of.Central',ppto:254957604,pa:84985868,real:81232121,proy:254957604,mc:'Dic 2026',mci:6,jun:0,jul:0,ago:0,sep:0,oct:0,nov:0,dic:0,ene:19440616,feb:16517276,mar:21610527,abr:23663702},
-  {n:'Mantencion Casas',s:'Mantencion',ppto:30960000,pa:13570000,real:5280506,proy:30960000,mc:'Dic 2026',mci:6,jun:0,jul:0,ago:0,sep:0,oct:0,nov:0,dic:0,ene:749246,feb:1629665,mar:775004,abr:2126591},
-  {n:'Formacion Avellanos',s:'Form.Av.',ppto:241754920,pa:0,real:0,proy:241754920,mc:'Abr 2027',mci:10,jun:0,jul:0,ago:0,sep:0,oct:0,nov:0,dic:0,ene:0,feb:0,mar:0,abr:0},
-];
-const ING=[
-  {s:'Cerezos',ppto:679835520},{s:'Arandanos',ppto:278216900},{s:'Avellanos',ppto:438124000},
-  {s:'Siembras',ppto:315900000},{s:'Achicoria',ppto:299555500},{s:'Fardos',ppto:949113438},{s:'Ganaderia',ppto:568863000}
-];
-const RES=[
-  {s:'Cerezos',r:89332356},{s:'Arandanos',r:39158864},{s:'Avellanos',r:161881496},
-  {s:'Siembras',r:27419005},{s:'Achicoria',r:114055497},{s:'Fardos',r:355154314},{s:'Ganaderia',r:102431329},
-  {s:'Of.Central',r:-254957604},{s:'Mantencion',r:-30960000},{s:'Form.Av.',r:-241754920}
-];
-const ML=['Jun','Jul','Ago','Sep','Oct','Nov','Dic','Ene','Feb','Mar','Abr'];
-const MK=['jun','jul','ago','sep','oct','nov','dic','ene','feb','mar','abr'];
-const CL=['#3b82f6','#10b981','#f59e0b','#ef4444','#8b5cf6','#ec4899','#14b8a6','#f97316','#6366f1','#84cc16'];
+const ingresos=[679835520,278216900,438124000,315900000,299555500,949113438,568863000];
+const resultados=[89332356,39158864,161881496,27419005,114055497,355154314,102431329,-254957604,-30960000,-241754920];
 
-const fmt=v=>{const a=Math.abs(v);const s=a>=1000000?'$'+(a/1000000).toFixed(1)+'M':'$'+(a/1000).toFixed(0)+'K';return v<0?'-'+s:s;};
+const fmt=v=>{const a=Math.abs(v);return a>=1e6?'$'+(a/1e6).toFixed(1)+'M':'$'+(a/1e3).toFixed(0)+'K';};
 const fp=v=>v.toFixed(1)+'%';
 
-const tP=G.reduce((s,p)=>s+p.ppto,0),tPa=G.reduce((s,p)=>s+p.pa,0),tR=G.reduce((s,p)=>s+p.real,0);
-const pE=tPa>0?(tR/tPa)*100:0,dif=tR-tPa,dis=tP-tR;
-const tI=ING.reduce((s,p)=>s+p.ppto,0),tRes=RES.reduce((s,p)=>s+p.r,0),mg=tI>0?(tRes/tI)*100:0;
-const gM=MK.map(m=>G.reduce((s,p)=>s+(p[m]||0),0));
-let ac=0;const acu=gM.map(g=>{ac+=g;return ac;});
-const mC=gM.filter(g=>g>0).length,pm=mC>0?tR/mC:0,mR=11-mC,pC=tR+pm*mR,risk=pC>tP;
-const sG=G.filter(p=>p.real===0),sP=G.filter(p=>p.pa>0&&p.real>p.pa);
+const totalPpto=gastos.reduce((s,p)=>s+p.ppto,0);
+const totalPa=gastos.reduce((s,p)=>s+p.pa,0);
+const totalReal=gastos.reduce((s,p)=>s+p.real,0);
+const pctEj=totalPa>0?(totalReal/totalPa)*100:0;
+const dif=totalReal-totalPa;
+const disp=totalPpto-totalReal;
 
-function sem(p){
-  if(p===0)return{d:'⚪',l:'Sin inicio',c:'#9ca3af',bg:'#f3f4f6'};
-  if(p>100)return{d:'🔴',l:'Sobre presupuesto',c:'#ef4444',bg:'#fef2f2'};
-  if(p>=85)return{d:'🟡',l:'Riesgo',c:'#f59e0b',bg:'#fffbeb'};
-  return{d:'🟢',l:'En control',c:'#10b981',bg:'#f0fdf4'};
-}
+const totalIng=ingresos.reduce((s,v)=>s+v,0);
+const totalRes=resultados.reduce((s,v)=>s+v,0);
+const margen=totalIng>0?(totalRes/totalIng)*100:0;
 
-// KPIs
-const mk=(c,l,v,s)=>`<div class="kpi ${c}"><div class="kl">${l}</div><div class="kv">${v}</div><div class="ks">${s}</div></div>`;
-document.getElementById('kpis1').innerHTML=
-  mk('bl','Presupuesto temporada',fmt(tP),G.length+' proyectos')+
-  mk('gr','Real a abril 2026',fmt(tR),'Gasto acumulado')+
-  mk(pE>100?'re':'or','% Ejecucion',fp(pE),'Vs. presupuesto a abr')+
-  mk(dif>0?'re':'te','Diferencia',fmt(Math.abs(dif)),dif>0?'Sobre presupuesto':'Bajo presupuesto');
-document.getElementById('kpis2').innerHTML=
-  mk('pu','Ingresos presupuestados',fmt(tI),'Total temporada')+
-  mk(tRes>0?'gr':'re','Resultado neto',fmt(tRes),fp(mg)+' margen')+
-  mk('or','Gasto prom mensual',fmt(pm),mC+' meses activos')+
-  mk(risk?'re':'gr','Proyeccion cierre',fmt(pC),risk?'Riesgo sobregasto':'Dentro del presupuesto')+
-  mk('te','Disponible',fmt(dis),mR+' meses restantes')+
-  mk(sG.length>0?'or':'gr','Sin gasto',sG.length+' proyectos',sG.map(p=>p.s).join(', ')||'Todos ejecutando');
+const sinGasto=gastos.filter(p=>p.real===0);
+const sobrePpto=gastos.filter(p=>p.pa>0&&p.real>p.pa);
+
+// KPIs 1
+const kpis1=[
+  {l:'Presupuesto Temporada',v:fmt(totalPpto),s:gastos.length+' proyectos',c:'#3b82f6'},
+  {l:'Real a Abril 2026',v:fmt(totalReal),s:'Gasto acumulado',c:'#10b981'},
+  {l:'% Ejecucion',v:fp(pctEj),s:'Vs. presupuesto a abr',c:pctEj>100?'#ef4444':'#f59e0b'},
+  {l:'Diferencia',v:fmt(Math.abs(dif)),s:dif>0?'Sobre presupuesto':'Bajo presupuesto',c:dif>0?'#ef4444':'#14b8a6'}
+];
+document.getElementById('kpis1').innerHTML=kpis1.map(k=>`<div class="kpi" style="border-top-color:${k.c}"><div class="kpi-label">${k.l}</div><div class="kpi-value" style="color:${k.c}">${k.v}</div><div class="kpi-sub">${k.s}</div></div>`).join('');
+
+// KPIs 2
+const kpis2=[
+  {l:'Ingresos Ppto',v:fmt(totalIng),s:'Total temporada',c:'#8b5cf6'},
+  {l:'Resultado Neto',v:fmt(totalRes),s:fp(margen)+' margen',c:totalRes>0?'#10b981':'#ef4444'},
+  {l:'Disponible',v:fmt(disp),s:'Para 7 meses restantes',c:'#14b8a6'},
+  {l:'Sin Gasto',v:sinGasto.length+' proy.',s:sinGasto.map(p=>p.s).join(', ')||'Todos ejecutando',c:sinGasto.length>0?'#f59e0b':'#10b981'}
+];
+document.getElementById('kpis2').innerHTML=kpis2.map(k=>`<div class="kpi" style="border-top-color:${k.c}"><div class="kpi-label">${k.l}</div><div class="kpi-value" style="color:${k.c}">${k.v}</div><div class="kpi-sub">${k.s}</div></div>`).join('');
 
 // Diagnostico
-document.getElementById('diag').innerHTML=`<div class="ins ${pE>100?'ire':pE>85?'ior':'igr'}">
-  <div class="it">${pE>100?'Alerta — sobregasto':pE>85?'Atencion — ejecucion elevada':'Estado general — controlado'}</div>
-  <div class="ix">Al cierre de abril se ejecuto el <strong>${fp(pE)}</strong>. Gasto real: <strong>${fmt(tR)}</strong>. ${dif>0?'Sobrejecucion de '+fmt(Math.abs(dif))+'.':'Margen de '+fmt(Math.abs(dif))+' bajo lo presupuestado.'} Ritmo: <strong>${fmt(pm)}/mes</strong>. Proyeccion cierre: <strong>${fmt(pC)}</strong> (${fp((pC/tP)*100)}). Resultado neto: <strong>${fmt(tRes)}</strong>, margen <strong>${fp(mg)}</strong>.</div>
-  <div class="it">Preguntas estrategicas</div>
-  <ul class="iq"><li>El ritmo de gasto esta alineado con el calendario de cosecha?</li><li>Los ingresos proyectados cubren la proyeccion de cierre?</li><li>Que proyectos tienen mayor impacto en el resultado neto?</li></ul>
+const diag=`<div class="insight ${pctEj>100?'red':pctEj>85?'orange':'green'}">
+  <div class="insight-title">${pctEj>100?'ALERTA: Sobregasto detectado':pctEj>85?'ATENCION: Ejecucion elevada':'ESTADO GENERAL: Controlado'}</div>
+  <div class="insight-text">Al cierre de abril se ejecuto el ${fp(pctEj)} del presupuesto planificado. Gasto real: ${fmt(totalReal)}. ${dif>0?'Sobrejecucion de '+fmt(Math.abs(dif))+'.':'Margen de '+fmt(Math.abs(dif))+' bajo lo presupuestado.'} Resultado neto presupuestado: ${fmt(totalRes)} con margen del ${fp(margen)} sobre ingresos.</div>
+  <div class="insight-title">Preguntas Estrategicas</div>
+  <ul class="insight-list">
+    <li>El ritmo de gasto esta alineado con el calendario de cosecha?</li>
+    <li>Los ingresos proyectados cubren la proyeccion de cierre de gastos?</li>
+    <li>Que proyectos tienen mayor impacto en el resultado neto?</li>
+    <li>Se requiere revision formal del presupuesto para la segunda mitad?</li>
+  </ul>
 </div>`;
-
-// Semaforo
-document.getElementById('sem').innerHTML=G.map(p=>{
-  const pct=p.pa>0?(p.real/p.pa)*100:0,s=sem(pct);
-  return`<div class="sc" style="background:${s.bg}"><div style="font-size:1.4rem">${s.d}</div><div class="si"><h4>${p.n.replace(' 2026','').replace(' Produccion','')}</h4><p>${s.l} · ${fmt(p.real)}</p></div><div class="sp" style="color:${s.c}">${fp(pct)}</div></div>`;
-}).join('');
-
-// Alertas
-let ah='';
-sP.forEach(p=>{ah+=`<div class="al are"><div style="font-size:1.1rem">🔴</div><div><div class="ah">${p.n} — ${(p.real/p.pa*100).toFixed(1)}%</div><div class="ap">Supera presupuesto en ${fmt(p.real-p.pa)}.</div></div></div>`;});
-G.filter(p=>p.pa>0&&p.real/p.pa>=0.85&&p.real<=p.pa).forEach(p=>{ah+=`<div class="al aor"><div style="font-size:1.1rem">🟡</div><div><div class="ah">${p.n} — ${(p.real/p.pa*100).toFixed(1)}%</div><div class="ap">Cerca del limite. Monitorear.</div></div></div>`;});
-sG.forEach(p=>{ah+=`<div class="al abl"><div style="font-size:1.1rem">⚪</div><div><div class="ah">${p.n} — sin gasto</div><div class="ap">Presupuesto: ${fmt(p.ppto)}.</div></div></div>`;});
-if(risk)ah+=`<div class="al are"><div style="font-size:1.1rem">📊</div><div><div class="ah">Proyeccion supera presupuesto total</div><div class="ap">${fmt(pC)} vs ${fmt(tP)}. Exceso: ${fmt(pC-tP)}.</div></div></div>`;
-document.getElementById('alertas').innerHTML=ah||'<p style="font-size:0.8rem;color:#6b7280">Sin alertas activas.</p>';
-
-// Proyeccion
-document.getElementById('proy').innerHTML=`<h2 style="color:white;font-size:1rem;font-weight:700;margin-bottom:16px;">📊 Proyeccion de cierre de temporada</h2>
-<div class="pg">
-  <div class="pi"><div class="pv">${fmt(tR)}</div><div class="pl">Gasto acumulado</div></div>
-  <div class="pi"><div class="pv">${fmt(pm*mR)}</div><div class="pl">Proyectado restante (${mR} meses)</div></div>
-  <div class="pi"><div class="pv" style="color:${risk?'#fca5a5':'#6ee7b7'}">${fmt(pC)}</div><div class="pl">${risk?'Cierre RIESGO':'Cierre OK'}</div></div>
-</div>`;
-
-// SVG helpers
-function svgBar(W,H,labels,datasets,opts={}){
-  const pad={t:20,r:20,b:50,l:60};
-  const w=W-pad.l-pad.r,h=H-pad.t-pad.b;
-  const allVals=datasets.flatMap(d=>d.data);
-  const maxV=Math.max(...allVals,1),minV=Math.min(...allVals,0);
-  const range=maxV-minV||1;
-  const nL=5;
-  const bW=w/labels.length;
-  const bPad=4;
-  const bW2=(bW-bPad*2)/datasets.length;
-  let s=`<svg width="100%" viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg">`;
-  // Grid lines
-  for(let i=0;i<=nL;i++){
-    const v=minV+(range/nL)*i;
-    const y=pad.t+h-(h*(v-minV)/range);
-    s+=`<line x1="${pad.l}" y1="${y}" x2="${pad.l+w}" y2="${y}" stroke="#f3f4f6" stroke-width="1"/>`;
-    s+=`<text x="${pad.l-6}" y="${y+4}" text-anchor="end" font-size="10" fill="#9ca3af">${v>=1000000?(v/1000000).toFixed(0)+'M':v>=1000?(v/1000).toFixed(0)+'K':v.toFixed(0)}</text>`;
-  }
-  // Bars
-  datasets.forEach((ds,di)=>{
-    ds.data.forEach((v,i)=>{
-      const x=pad.l+i*bW+bPad+di*bW2;
-      const barH=Math.abs(h*(v-0)/range);
-      const y=v>=0?pad.t+h*(1-v/range):pad.t+h;
-      s+=`<rect x="${x}" y="${y}" width="${bW2-2}" height="${Math.max(barH,1)}" fill="${ds.color}" rx="2"/>`;
-    });
-  });
-  // X labels
-  labels.forEach((l,i)=>{
-    s+=`<text x="${pad.l+i*bW+bW/2}" y="${H-8}" text-anchor="middle" font-size="10" fill="#6b7280">${l}</text>`;
-  });
-  // Legend
-  if(opts.legend){
-    let lx=pad.l;
-    opts.legend.forEach((l,i)=>{
-      s+=`<rect x="${lx}" y="4" width="10" height="10" fill="${l.c}" rx="2"/>`;
-      s+=`<text x="${lx+14}" y="13" font-size="10" fill="#374151">${l.n}</text>`;
-      lx+=l.n.length*6+24;
-    });
-  }
-  s+=`</svg>`;
-  return s;
-}
-
-function svgLine(W,H,labels,data,color='#ef4444',y2=false){
-  const pad={t:20,r:y2?60:20,b:50,l:60};
-  const w=W-pad.l-pad.r,h=H-pad.t-pad.b;
-  const maxV=Math.max(...data,1),minV=0;
-  const range=maxV-minV||1;
-  const pts=data.map((v,i)=>`${pad.l+i*(w/(data.length-1))},${pad.t+h-(h*(v-minV)/range)}`);
-  let s=``;
-  s+=`<polyline points="${pts.join(' ')}" fill="none" stroke="${color}" stroke-width="2.5" stroke-linejoin="round"/>`;
-  pts.forEach((pt,i)=>{
-    const[x,y]=pt.split(',');
-    s+=`<circle cx="${x}" cy="${y}" r="4" fill="${color}" stroke="white" stroke-width="1.5"/>`;
-  });
-  if(y2){
-    const nL=4;
-    for(let i=0;i<=nL;i++){
-      const v=minV+(range/nL)*i;
-      const y=pad.t+h-(h*(v-minV)/range);
-      s+=`<text x="${pad.l+w+6}" y="${y+4}" font-size="10" fill="${color}">${(v/1000000).toFixed(0)}M</text>`;
-    }
-  }
-  return s;
-}
-
-// Grafico 1: Barras + linea acumulado
-const W1=600,H1=260;
-const pad1={t:20,r:60,b:50,l:60};
-const w1=W1-pad1.l-pad1.r,h1=H1-pad1.t-pad1.b;
-const maxG=Math.max(...gM,1),maxA=Math.max(...acu,1);
-let svg1=`<svg width="100%" viewBox="0 0 ${W1} ${H1}" xmlns="http://www.w3.org/2000/svg">`;
-for(let i=0;i<=5;i++){const v=(maxG/5)*i;const y=pad1.t+h1-(h1*v/maxG);svg1+=`<line x1="${pad1.l}" y1="${y}" x2="${pad1.l+w1}" y2="${y}" stroke="#f3f4f6" stroke-width="1"/><text x="${pad1.l-6}" y="${y+4}" text-anchor="end" font-size="10" fill="#9ca3af">${(v/1000000).toFixed(0)}M</text>`;}
-const bw1=w1/ML.length;
-gM.forEach((v,i)=>{
-  const bh=h1*Math.abs(v)/maxG;
-  const bx=pad1.l+i*bw1+4;
-  const by=v>=0?pad1.t+h1-h1*v/maxG:pad1.t+h1;
-  svg1+=`<rect x="${bx}" y="${by}" width="${bw1-8}" height="${Math.max(bh,1)}" fill="rgba(59,130,246,0.7)" rx="2"/>`;
-  svg1+=`<text x="${pad1.l+i*bw1+bw1/2}" y="${H1-8}" text-anchor="middle" font-size="10" fill="#6b7280">${ML[i]}</text>`;
-});
-const acuPts=acu.map((v,i)=>`${pad1.l+i*bw1+bw1/2},${pad1.t+h1-(h1*v/maxA)}`);
-svg1+=`<polyline points="${acuPts.join(' ')}" fill="none" stroke="#ef4444" stroke-width="2.5"/>`;
-acuPts.forEach(pt=>{const[x,y]=pt.split(',');svg1+=`<circle cx="${x}" cy="${y}" r="4" fill="#ef4444" stroke="white" stroke-width="1.5"/>`;});
-for(let i=0;i<=4;i++){const v=(maxA/4)*i;const y=pad1.t+h1-(h1*v/maxA);svg1+=`<text x="${pad1.l+w1+6}" y="${y+4}" font-size="10" fill="#ef4444">${(v/1000000).toFixed(0)}M</text>`;}
-svg1+=`<rect x="${pad1.l}" y="4" width="10" height="10" fill="rgba(59,130,246,0.7)" rx="2"/><text x="${pad1.l+14}" y="13" font-size="10" fill="#374151">Gasto mensual</text>`;
-svg1+=`<rect x="${pad1.l+100}" y="4" width="10" height="10" fill="#ef4444" rx="2"/><text x="${pad1.l+114}" y="13" font-size="10" fill="#374151">Acumulado</text>`;
-svg1+=`</svg>`;
-document.getElementById('g1').innerHTML=svg1;
-const maxGM=Math.max(...gM);
-document.getElementById('i1').innerHTML=`<div class="it">Hallazgos</div><div class="ix">Mayor gasto en <strong>${ML[gM.indexOf(maxGM)]}</strong> con <strong>${fmt(maxGM)}</strong>. Acumulado: <strong>${fmt(acu[acu.length-1])}</strong>.</div><div class="it">Preguntas</div><ul class="iq"><li>El peak coincide con la temporada de cosecha?</li><li>Los meses sin gasto reflejan estacionalidad?</li></ul>`;
-
-// Grafico 2: Donut/Pie con SVG
-const cult=G.filter(p=>p.real>0);
-const totalCult=cult.reduce((s,p)=>s+p.real,0);
-const W2=320,H2=260,cx=130,cy=125,r=100,ri=55;
-let svg2=`<svg width="100%" viewBox="0 0 ${W2} ${H2}" xmlns="http://www.w3.org/2000/svg">`;
-let startAngle=-Math.PI/2;
-cult.forEach((p,i)=>{
-  const slice=(p.real/totalCult)*2*Math.PI;
-  const endAngle=startAngle+slice;
-  const x1=cx+r*Math.cos(startAngle),y1=cy+r*Math.sin(startAngle);
-  const x2=cx+r*Math.cos(endAngle),y2=cy+r*Math.sin(endAngle);
-  const ix1=cx+ri*Math.cos(startAngle),iy1=cy+ri*Math.sin(startAngle);
-  const ix2=cx+ri*Math.cos(endAngle),iy2=cy+ri*Math.sin(endAngle);
-  const large=slice>Math.PI?1:0;
-  svg2+=`<path d="M${ix1},${iy1} L${x1},${y1} A${r},${r} 0 ${large},1 ${x2},${y2} L${ix2},${iy2} A${ri},${ri} 0 ${large},0 ${ix1},${iy1}" fill="${CL[i%CL.length]}" stroke="white" stroke-width="2"/>`;
-  startAngle=endAngle;
-});
-svg2+=`<text x="${cx}" y="${cy-8}" text-anchor="middle" font-size="12" fill="#374151" font-weight="600">${fmt(totalCult)}</text>`;
-svg2+=`<text x="${cx}" y="${cy+8}" text-anchor="middle" font-size="10" fill="#9ca3af">Total real</text>`;
-let ly=20;
-cult.forEach((p,i)=>{
-  svg2+=`<rect x="270" y="${ly-8}" width="10" height="10" fill="${CL[i%CL.length]}" rx="2"/>`;
-  svg2+=`<text x="284" y="${ly}" font-size="9" fill="#374151">${p.s}: ${((p.real/totalCult)*100).toFixed(0)}%</text>`;
-  ly+=18;
-});
-svg2+=`</svg>`;
-document.getElementById('g2').innerHTML=svg2;
-const top=[...G].sort((a,b)=>b.real-a.real)[0];
-document.getElementById('i2').innerHTML=`<div class="it">Hallazgos</div><div class="ix"><strong>${top.s}</strong> concentra el <strong>${((top.real/totalCult)*100).toFixed(1)}%</strong> del gasto real.</div><div class="it">Preguntas</div><ul class="iq"><li>La concentracion esta alineada con la estrategia de cultivos?</li></ul>`;
-
-// Ranking
-const rk=G.filter(p=>p.pa>0).map(p=>({s:p.s,pct:(p.real/p.pa)*100})).sort((a,b)=>b.pct-a.pct);
-document.getElementById('rank').innerHTML=rk.map((p,i)=>{
-  const c=p.pct>100?'#ef4444':p.pct>=85?'#f59e0b':'#10b981';
-  return`<div class="ri"><div class="rn">${i+1}</div><div style="flex:1"><div style="font-size:0.8rem;font-weight:600;color:#1f2937;margin-bottom:3px">${p.s}</div><div class="rb"><div class="rf" style="width:${Math.min(p.pct,100)}%;background:${c}"></div></div></div><div style="font-size:0.85rem;font-weight:700;color:${c};min-width:44px;text-align:right">${fp(p.pct)}</div></div>`;
-}).join('');
-document.getElementById('i3').innerHTML=`<div class="it">Hallazgos</div><div class="ix">${rk.filter(p=>p.pct>100).length} proyectos sobre 100% y ${rk.filter(p=>p.pct<50&&p.pct>0).length} con menos del 50%.</div><div class="it">Preguntas</div><ul class="iq"><li>Los primeros del ranking pueden agotar presupuesto antes del cierre?</li></ul>`;
-
-// Grafico 3: Presupuesto vs Real barras agrupadas
-const W3=600,H3=260,pad3={t:30,r:20,b:50,l:65};
-const w3=W3-pad3.l-pad3.r,h3=H3-pad3.t-pad3.b;
-const maxV3=Math.max(...G.flatMap(p=>[p.ppto,p.real]),1);
-let svg3=`<svg width="100%" viewBox="0 0 ${W3} ${H3}" xmlns="http://www.w3.org/2000/svg">`;
-for(let i=0;i<=5;i++){const v=(maxV3/5)*i;const y=pad3.t+h3-(h3*v/maxV3);svg3+=`<line x1="${pad3.l}" y1="${y}" x2="${pad3.l+w3}" y2="${y}" stroke="#f3f4f6" stroke-width="1"/><text x="${pad3.l-6}" y="${y+4}" text-anchor="end" font-size="10" fill="#9ca3af">${(v/1000000).toFixed(0)}M</text>`;}
-const bw3=w3/G.length,bpw3=(bw3-6)/2;
-G.forEach((p,i)=>{
-  const x1=pad3.l+i*bw3+3;
-  const x2=x1+bpw3+1;
-  const h3p=h3*p.ppto/maxV3,h3r=h3*p.real/maxV3;
-  svg3+=`<rect x="${x1}" y="${pad3.t+h3-h3p}" width="${bpw3}" height="${Math.max(h3p,1)}" fill="rgba(59,130,246,0.75)" rx="2"/>`;
-  svg3+=`<rect x="${x2}" y="${pad3.t+h3-h3r}" width="${bpw3}" height="${Math.max(h3r,1)}" fill="rgba(16,185,129,0.75)" rx="2"/>`;
-  svg3+=`<text x="${pad3.l+i*bw3+bw3/2}" y="${H3-8}" text-anchor="middle" font-size="9" fill="#6b7280">${p.s}</text>`;
-});
-svg3+=`<rect x="${pad3.l}" y="4" width="10" height="10" fill="rgba(59,130,246,0.75)" rx="2"/><text x="${pad3.l+14}" y="13" font-size="10" fill="#374151">Presupuesto</text>`;
-svg3+=`<rect x="${pad3.l+100}" y="4" width="10" height="10" fill="rgba(16,185,129,0.75)" rx="2"/><text x="${pad3.l+114}" y="13" font-size="10" fill="#374151">Real a abr</text>`;
-svg3+=`</svg>`;
-document.getElementById('g3').innerHTML=svg3;
-document.getElementById('i4').innerHTML=`<div class="it">Hallazgos</div><div class="ix">${sP.length} proyectos superan presupuesto a abril.</div><div class="it">Preguntas</div><ul class="iq"><li>Los excesos tienen justificacion documentada?</li></ul>`;
-
-// Grafico 4: Ingresos vs Gastos
-const W4=700,H4=300,pad4={t:30,r:20,b:60,l:65};
-const w4=W4-pad4.l-pad4.r,h4=H4-pad4.t-pad4.b;
-const igD=ING.map(ing=>{const g=G.find(x=>x.s===ing.s);return{s:ing.s,ing:ing.ppto,gas:g?g.ppto:0};});
-const maxV4=Math.max(...igD.flatMap(p=>[p.ing,p.gas]),1);
-let svg4=`<svg width="100%" viewBox="0 0 ${W4} ${H4}" xmlns="http://www.w3.org/2000/svg">`;
-for(let i=0;i<=5;i++){const v=(maxV4/5)*i;const y=pad4.t+h4-(h4*v/maxV4);svg4+=`<line x1="${pad4.l}" y1="${y}" x2="${pad4.l+w4}" y2="${y}" stroke="#f3f4f6" stroke-width="1"/><text x="${pad4.l-6}" y="${y+4}" text-anchor="end" font-size="10" fill="#9ca3af">${(v/1000000).toFixed(0)}M</text>`;}
-const bw4=w4/igD.length,bpw4=(bw4-6)/2;
-igD.forEach((p,i)=>{
-  const x1=pad4.l+i*bw4+3,x2=x1+bpw4+1;
-  const hi=h4*p.ing/maxV4,hg=h4*p.gas/maxV4;
-  svg4+=`<rect x="${x1}" y="${pad4.t+h4-hi}" width="${bpw4}" height="${Math.max(hi,1)}" fill="rgba(16,185,129,0.75)" rx="2"/>`;
-  svg4+=`<rect x="${x2}" y="${pad4.t+h4-hg}" width="${bpw4}" height="${Math.max(hg,1)}" fill="rgba(239,68,68,0.65)" rx="2"/>`;
-  svg4+=`<text x="${pad4.l+i*bw4+bw4/2}" y="${H4-10}" text-anchor="middle" font-size="10" fill="#6b7280">${p.s}</text>`;
-});
-svg4+=`<rect x="${pad4.l}" y="4" width="10" height="10" fill="rgba(16,185,129,0.75)" rx="2"/><text x="${pad4.l+14}" y="13" font-size="10" fill="#374151">Ingresos ppto</text>`;
-svg4+=`<rect x="${pad4.l+110}" y="4" width="10" height="10" fill="rgba(239,68,68,0.65)" rx="2"/><text x="${pad4.l+124}" y="13" font-size="10" fill="#374151">Gastos ppto</text>`;
-svg4+=`</svg>`;
-document.getElementById('g4').innerHTML=svg4;
-document.getElementById('i5').innerHTML=`<div class="it">Hallazgos</div><div class="ix">Ingresos totales: <strong>${fmt(tI)}</strong>. Gastos totales: <strong>${fmt(tP)}</strong>. Resultado neto: <strong>${fmt(tRes)}</strong> (margen ${fp(mg)}).</div><div class="it">Preguntas</div><ul class="iq"><li>Los proyectos con menor margen justifican su inclusion?</li><li>Se puede redirigir inversion hacia cultivos mas rentables?</li></ul>`;
-
-// Grafico 5: Waterfall
-const WF=700,HF=300,padF={t:30,r:20,b:60,l:70};
-const wf=WF-padF.l-padF.r,hf=HF-padF.t-padF.b;
-const resS=[...RES].sort((a,b)=>b.r-a.r);
-const maxRF=Math.max(...resS.map(p=>Math.abs(p.r)),1);
-let svg5=`<svg width="100%" viewBox="0 0 ${WF} ${HF}" xmlns="http://www.w3.org/2000/svg">`;
-const midY=padF.t+hf/2;
-svg5+=`<line x1="${padF.l}" y1="${midY}" x2="${padF.l+wf}" y2="${midY}" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4,2"/>`;
-for(let i=0;i<=4;i++){const v=(maxRF/2)*(i-2);const y=midY-(hf/2)*(v/maxRF);svg5+=`<text x="${padF.l-6}" y="${y+4}" text-anchor="end" font-size="9" fill="#9ca3af">${v>=0?'':'-'}${(Math.abs(v)/1000000).toFixed(0)}M</text>`;}
-const bwF=wf/resS.length;
-resS.forEach((p,i)=>{
-  const c=p.r>0?'rgba(16,185,129,0.8)':'rgba(239,68,68,0.75)';
-  const bh=hf/2*Math.abs(p.r)/maxRF;
-  const by=p.r>0?midY-bh:midY;
-  svg5+=`<rect x="${padF.l+i*bwF+4}" y="${by}" width="${bwF-8}" height="${Math.max(bh,1)}" fill="${c}" rx="2"/>`;
-  svg5+=`<text x="${padF.l+i*bwF+bwF/2}" y="${HF-10}" text-anchor="middle" font-size="9" fill="#6b7280">${p.s}</text>`;
-  const tv=p.r>0?by-4:by+bh+12;
-  svg5+=`<text x="${padF.l+i*bwF+bwF/2}" y="${tv}" text-anchor="middle" font-size="9" fill="${p.r>0?'#10b981':'#ef4444'}" font-weight="600">${fmt(p.r)}</text>`;
-});
-svg5+=`</svg>`;
-document.getElementById('g5').innerHTML=svg5;
-document.getElementById('i6').innerHTML=`<div class="it">Hallazgos</div><div class="ix">Resultado neto total: <strong>${fmt(tRes)}</strong>. Centros de costo puros (Of.Central, Mantencion, Form.Av.) no tienen ingreso asociado.</div><div class="it">Preguntas</div><ul class="iq"><li>Los centros de costo sin ingreso estan justificados operacionalmente?</li><li>El resultado neto esta alineado con las expectativas de los propietarios?</li></ul>`;
-
-// Gantt
-const GANT_MESES=['Jun 26','Jul 26','Ago 26','Sep 26','Oct 26','Nov 26','Dic 26','Ene 27','Feb 27','Mar 27','Abr 27','May 27','Jun 27','Jul 27','Ago 27'];
-const WG=700,HG=G.length*34+50;
-let svgG=`<svg width="100%" viewBox="0 0 ${WG} ${HG}" xmlns="http://www.w3.org/2000/svg">`;
-const lw=100,tw=WG-lw-20,bh=20,bpad=6;
-GANT_MESES.forEach((m,i)=>{const x=lw+i*(tw/14);svgG+=`<text x="${x}" y="16" font-size="8" fill="#9ca3af" text-anchor="middle">${m}</text><line x1="${x}" y1="20" x2="${x}" y2="${HG}" stroke="#f3f4f6" stroke-width="1"/>`;});
-G.forEach((p,i)=>{
-  const y=30+i*34;
-  svgG+=`<text x="${lw-6}" y="${y+13}" text-anchor="end" font-size="10" fill="#374151" font-weight="600">${p.s}</text>`;
-  const x1=lw;
-  const bww=(tw/14)*p.mci;
-  svgG+=`<rect x="${x1}" y="${y}" width="${bww}" height="${bh}" fill="${CL[i%CL.length]}" rx="4" opacity="0.85"/>`;
-  svgG+=`<text x="${x1+bww/2}" y="${y+13}" text-anchor="middle" font-size="9" fill="white" font-weight="600">${p.mc}</text>`;
-});
-svgG+=`</svg>`;
-document.getElementById('gantt').innerHTML=svgG;
-document.getElementById('i7').innerHTML=`<div class="it">Hallazgos</div><div class="ix">${G.filter(p=>p.mci<=6).length} proyectos cierran en Dic 2026. Fardos 2026 tiene el cierre mas lejano (Ago 2027).</div><div class="it">Preguntas</div><ul class="iq"><li>Los proyectos con cierre en 2027 tienen presupuesto suficiente?</li></ul>`;
-
-// Heatmap
-const maxH=Math.max(...G.flatMap(p=>MK.map(m=>Math.abs(p[m]||0))));
-let heatHtml=`<table style="min-width:700px;border-collapse:collapse"><thead><tr><th style="text-align:left;padding:6px 8px;font-size:0.72rem;color:#6b7280;background:#f9fafb;min-width:110px">Proyecto</th>${ML.map(m=>`<th style="padding:6px 8px;font-size:0.72rem;color:#6b7280;background:#f9fafb;text-align:center">${m}</th>`).join('')}</tr></thead><tbody>`;
-G.forEach(p=>{
-  heatHtml+=`<tr><td style="padding:6px 8px;font-size:0.75rem;font-weight:600;color:#1f2937;white-space:nowrap">${p.s}</td>`;
-  MK.forEach(m=>{
-    const v=p[m]||0,it=maxH>0?Math.abs(v)/maxH:0;
-    const r=v<0?239:v===0?243:Math.round(235-it*160);
-    const g=v<0?Math.round(100-it*50):v===0?244:Math.round(250-it*100);
-    const b2=v<0?Math.round(100-it*50):v===0?245:Math.round(220-it*170);
-    const tc=it>0.5?'white':'#374151';
-    heatHtml+=`<td style="padding:5px 4px;background:rgb(${r},${g},${b2});color:${tc};font-size:0.68rem;font-weight:${v!==0?600:400};text-align:center;min-width:52px">${v!==0?fmt(v):''}</td>`;
-  });
-  heatHtml+=`</tr>`;
-});
-heatHtml+=`</tbody></table>`;
-document.getElementById('heat').innerHTML=heatHtml;
-document.getElementById('i8').innerHTML=`<div class="it">Hallazgos</div><div class="ix">Fardos domina el gasto en casi todos los meses. Mayor intensidad en Mar-Abr 2027.</div><div class="it">Preguntas</div><ul class="iq"><li>La concentracion de gastos genera problemas de flujo de caja?</li></ul>`;
+document.getElementById('diag').innerHTML=diag;
 
 // Tabla
-document.getElementById('tabla').innerHTML=`<thead><tr>
-  <th style="text-align:left">Proyecto</th><th>Ppto. Temp.</th><th>Ppto. Abr-26</th><th>Real Abr-26</th><th>% Ejec.</th><th>Diferencia</th><th>Mes cierre</th>
-</tr></thead><tbody>${G.map(p=>{
-  const pct=p.pa>0?(p.real/p.pa)*100:0,dd=p.real-p.pa,s=sem(pct);
-  const bc=pct>100?'br':pct>=85?'bo':pct===0?'bgr':'bg';
-  return`<tr><td>${s.d} ${p.n.replace(' 2026 Produccion','').replace(' 2026','')}</td><td>${fmt(p.ppto)}</td><td>${fmt(p.pa)}</td><td style="color:#10b981;font-weight:600">${fmt(p.real)}</td><td><span class="${bc}">${fp(pct)}</span></td><td class="${dd>0?'neg':'pos'}">${dd>0?'+':''}${fmt(dd)}</td><td style="font-size:0.75rem;color:#6b7280">${p.mc}</td></tr>`;
+const tabla=`<thead><tr>
+  <th style="text-align:left">Proyecto</th>
+  <th>Ppto. Temp.</th>
+  <th>Ppto. Abr</th>
+  <th>Real Abr</th>
+  <th>% Ejec.</th>
+  <th>Diferencia</th>
+  <th>Mes Cierre</th>
+</tr></thead><tbody>${gastos.map(p=>{
+  const pct=p.pa>0?(p.real/p.pa)*100:0;
+  const dd=p.real-p.pa;
+  const bc=pct>100?'red':pct>=85?'orange':pct===0?'gray':'green';
+  const bgColor=bc==='red'?'#fecaca':bc==='orange'?'#fef3c7':bc==='gray'?'#f3f4f6':'#dcfce7';
+  const txtColor=bc==='red'?'#991b1b':bc==='orange'?'#b45309':bc==='gray'?'#6b7280':'#166534';
+  return `<tr>
+    <td>${p.n}</td>
+    <td>${fmt(p.ppto)}</td>
+    <td>${fmt(p.pa)}</td>
+    <td style="color:#10b981;font-weight:600">${fmt(p.real)}</td>
+    <td><span style="background:${bgColor};color:${txtColor};padding:2px 6px;border-radius:10px;font-size:10px;font-weight:700">${fp(pct)}</span></td>
+    <td style="color:${dd>0?'#ef4444':'#10b981'};font-weight:600">${dd>0?'+':'-'}${fmt(Math.abs(dd))}</td>
+    <td>${p.mc}</td>
+  </tr>`;
 }).join('')}</tbody>`;
-document.getElementById('i9').innerHTML=`<div class="it">Hallazgos</div><div class="ix">${sG.length} proyectos sin gasto. ${sP.length} sobre presupuesto a abril.</div><div class="it">Preguntas</div><ul class="iq"><li>Los proyectos con mes de cierre lejano tienen ritmo adecuado?</li><li>Se requiere ajuste formal del presupuesto?</li></ul>`;
+document.getElementById('tabla').innerHTML=tabla;
+
+// Alertas
+let alertas='';
+sobrePpto.forEach(p=>{
+  const pct=(p.real/p.pa*100).toFixed(1);
+  alertas+=`<div class="insight red">
+    <div class="insight-title">ALERTA: ${p.n} - ${pct}% ejecutado</div>
+    <div class="insight-text">Supera presupuesto a abril en ${fmt(p.real-p.pa)}. Requiere revision inmediata.</div>
+  </div>`;
+});
+gastos.filter(p=>p.pa>0&&p.real/p.pa>=0.85&&p.real<=p.pa).forEach(p=>{
+  alertas+=`<div class="insight orange">
+    <div class="insight-title">ATENCION: ${p.n} - ${(p.real/p.pa*100).toFixed(1)}% ejecutado</div>
+    <div class="insight-text">Cerca del limite presupuestario. Requiere monitoreo.</div>
+  </div>`;
+});
+sinGasto.forEach(p=>{
+  alertas+=`<div class="insight blue">
+    <div class="insight-title">INFO: ${p.n} - sin gasto registrado</div>
+    <div class="insight-text">Presupuesto: ${fmt(p.ppto)}. Verificar estado de inicio del proyecto.</div>
+  </div>`;
+});
+document.getElementById('alertas').innerHTML=alertas||'<p style="color:#10b981;font-weight:600">Sin alertas activas - Dashboard en control.</p>';
 </script>
 </body>
 </html>
