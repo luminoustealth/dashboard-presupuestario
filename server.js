@@ -5,53 +5,56 @@ const cors = require('cors');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-const CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRjwiriCy6HqZJzlrzsjlop_Gr80pSX6B807W3Znpk8bsJcLXCq-71tVn6ZIdLUMlfk-wlBaD9AWNCm/pub?output=csv';
+const SHEET_ID = '1SPKF4fXDGXj76NEZWeKGLQ2_wPOzdy8oHm0-_c6W4wk';
+const API_KEY = 'AIzaSyDAo6rY4dkM8XOznCgowu04ULIWKtAMBb0';
+const RANGE = 'Hoja1!A1:S20';
 
 app.use(cors());
 app.use(express.static('public'));
 
-// Endpoint que lee el CSV de Google Sheets
 app.get('/api/data', async (req, res) => {
   try {
-    const response = await fetch(CSV_URL);
-    if (!response.ok) throw new Error(`HTTP Error: ${response.status}`);
+    const url = `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${RANGE}?key=${API_KEY}`;
+    const response = await fetch(url);
     
-    const csv = await response.text();
-    const lines = csv.trim().split('\n');
+    if (!response.ok) {
+      const err = await response.json();
+      throw new Error(err.error?.message || `HTTP Error: ${response.status}`);
+    }
+    
+    const result = await response.json();
+    const rows = result.values || [];
+
+    const parseNum = (val) => {
+      if (!val) return 0;
+      val = String(val).trim().replace(/\./g, '').replace(',', '.');
+      return parseFloat(val) || 0;
+    };
+
     const data = [];
 
-    for (let i = 2; i < lines.length; i++) {
-      if (!lines[i].trim()) continue;
-
-      const values = lines[i].split(',').map(v => {
-        v = v.trim();
-        return v.replace(/\./g, '').replace(',', '.');
-      });
-
-      if (!values[1]) continue;
-      if (values[1].toLowerCase().includes('total')) break;
-
-      const parseNum = (val) => {
-        if (!val) return 0;
-        return parseFloat(String(val).trim().replace(/\./g, '').replace(',', '.')) || 0;
-      };
+    for (let i = 0; i < rows.length; i++) {
+      const row = rows[i];
+      // Buscar filas que tengan "GASTOS" en columna C (índice 2)
+      if (!row[2] || !row[2].includes('GASTOS')) continue;
+      if (!row[1] || row[1].toLowerCase().includes('total')) continue;
 
       data.push({
-        nombre: values[1],
-        ppto: parseNum(values[3]),
-        pptoAbr: parseNum(values[4]),
-        real: parseNum(values[5]),
-        jun: parseNum(values[6]),
-        jul: parseNum(values[7]),
-        ago: parseNum(values[8]),
-        sep: parseNum(values[9]),
-        oct: parseNum(values[10]),
-        nov: parseNum(values[11]),
-        dic: parseNum(values[12]),
-        ene: parseNum(values[13]),
-        feb: parseNum(values[14]),
-        mar: parseNum(values[15]),
-        abr: parseNum(values[16]),
+        nombre: row[1] || '',
+        ppto: parseNum(row[3]),
+        pptoAbr: parseNum(row[4]),
+        real: parseNum(row[5]),
+        jun: parseNum(row[6]),
+        jul: parseNum(row[7]),
+        ago: parseNum(row[8]),
+        sep: parseNum(row[9]),
+        oct: parseNum(row[10]),
+        nov: parseNum(row[11]),
+        dic: parseNum(row[12]),
+        ene: parseNum(row[13]),
+        feb: parseNum(row[14]),
+        mar: parseNum(row[15]),
+        abr: parseNum(row[16]),
       });
     }
 
