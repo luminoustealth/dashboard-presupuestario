@@ -1,0 +1,11 @@
+{
+  "name": "dashboard-presupuestario",
+  "version": "1.0.0",
+  "description": "Dashboard Presupuestario 2026 - A. Los Placeres",
+  "scripts": {
+    "start": "http-server -p 3000",
+    "build": "echo 'No build needed'"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
